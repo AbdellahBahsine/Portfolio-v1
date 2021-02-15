@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sans-serif {
+  font-family: "Lato", sans-serif;
+}
+
+.serif {
+  font-family: "Amiri", serif;
+}
+
+.logo-font {
+  font-family: "Courgette", cursive;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.black-text {
+  color: #333;
+}
+
+.gray-text {
+  color: #c2c2c2;
+}
+
+.primary-color {
+  color: #7c17ac;
+}
+
+button {
+  width: 140px;
+  height: 40px;
+  border-radius: 25px;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.btn--primary {
+  background-color: #7c17ac;
+  color: #fff;
+}
+
+.btn--secondary {
+  border: 1px solid #7c17ac;
+  color: #7c17ac;
+}
+
+header {
+  background-color: #333;
+  height: 80vh;
+}
+header .header__wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 16%;
+}
+header .header__wrapper .nav__item {
+  margin-left: 25px;
+}
+header .hero {
+  height: 80%;
+}
+header .hero .hero__wrapper {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 35px;
+}
+header .hero .hero__wrapper .hero__title {
+  font-size: 38px;
+}
+header .hero .hero__wrapper .hero__title span {
+  color: #7c17ac;
+}
+header .hero .hero__wrapper .buttons {
+  margin-top: 30px;
+}
+header .hero .hero__wrapper .buttons button {
+  margin: 0 10px;
+}
+
+/*# sourceMappingURL=index.css.map */
