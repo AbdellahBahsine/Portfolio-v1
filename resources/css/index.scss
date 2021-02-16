@@ -22,6 +22,10 @@ a{
     font-family: $serif-font;
 }
 
+.title{
+    font-size: 36px;
+}
+
 .logo-font{
     font-family: $handwriting-font;
 }
@@ -103,6 +107,75 @@ header{
 
                 button{
                     margin: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+main{
+    .about{
+        margin-top: 80px;
+        margin-bottom: 80px;
+
+        .about__wrapper{
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+
+            .img__container{
+                display: flex;
+                justify-content: center;
+                width: 45%;
+                margin-left: 5%;
+
+                .img{
+                    width: 100%;
+                    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                    background-image: url("../images/IMG-20200911-WA0000.jpg");
+                    background-image: linear-gradient( rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5) ), url("../images/IMG-20200911-WA0000.jpg");
+                    background-size: cover;
+                    background-position:right;
+                }
+
+            }
+
+            .text__container{
+                padding: 30px;
+                width: 45%;
+                
+
+                p{
+                    line-height: 1.5;
+                    width: 440px;
+                }
+
+                .percentage-text{
+                    margin-top: 25px;
+                    margin-bottom: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    h4{
+                        line-height: 1.5;
+                    }
+                }
+
+                .percentage-bar{
+                    width: 100%;
+                    height: 3px;
+                    background-color: #c2c2c2;
+                    position: relative;
+
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 350px;
+                        height: 3px;
+                        background-color:rgb(124, 23, 172);
+                    }
                 }
             }
         }
