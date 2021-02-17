@@ -116,7 +116,6 @@ header{
 main{
     .about{
         margin-top: 80px;
-        margin-bottom: 80px;
 
         .about__wrapper{
             width: 80%;
@@ -176,6 +175,107 @@ main{
                         height: 3px;
                         background-color:rgb(124, 23, 172);
                     }
+                }
+            }
+        }
+    }
+
+    .work{
+        margin-top: 80px;
+        padding-top: 40px;
+        padding-bottom: 80px;
+        background-color: #f3f3f3;
+
+        .work__wrapper{
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .cards{
+                display: flex;
+                width: 100%;
+                margin-top: 10px;
+                margin-bottom: 25px;
+
+                .card{
+                    
+                    z-index: 1;
+                    width: 30%;
+                    margin: 0 20px;
+                    height: 250px;
+                    border-radius: 5px;
+                    background-size: cover;
+                    background-position: top center;
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    cursor: pointer;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+
+                    p, h4, .buttons{
+                        display: none;
+                    }
+
+                    h4{
+                        margin-bottom: 10px;
+                    }
+
+                    .buttons{
+                        margin-top: 15px;
+                    }
+
+                    &:first-child{
+                        margin-left: 0;
+                    }
+
+                    &:last-child{
+                        margin-right: 0;
+                    }
+
+                    .card_hover{
+                        position: absolute;
+                        z-index: -2;
+                        top: 0;
+                        left: 0;
+                        height: 0%;
+                        width: 100%;
+                        border-radius: 5px;
+                        background-color:rgba(51, 51, 51, 0.5);
+                        transition: 0.8s;
+
+                    }
+
+                    &:hover .card_hover{
+                        height: 100%;
+                    }
+
+                    &:hover p, &:hover h4, &:hover .buttons{
+                        display: flex;
+                    }
+
+                    button{
+                        width: 120px;
+                        margin: 0 6px;
+                    }
+                }
+
+                .card_1{
+                    position: relative;
+                    background-image: url("../images/desktop-design.jpg");
+                }
+
+                .card_2{
+                    position: relative;
+                    background-image: url("../images/desktop-design.jpg");
+                }
+
+                .card_3{
+                    position: relative;
+                    background-image: url("../images/desktop-design.jpg");
                 }
             }
         }

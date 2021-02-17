@@ -102,7 +102,6 @@ header .hero .hero__wrapper .buttons button {
 
 main .about {
   margin-top: 80px;
-  margin-bottom: 80px;
 }
 main .about .about__wrapper {
   width: 80%;
@@ -154,6 +153,89 @@ main .about .about__wrapper .text__container .percentage-bar::after {
   width: 350px;
   height: 3px;
   background-color: #7c17ac;
+}
+main .work {
+  margin-top: 80px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  background-color: #f3f3f3;
+}
+main .work .work__wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .work .work__wrapper .cards {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+main .work .work__wrapper .cards .card {
+  z-index: 1;
+  width: 30%;
+  margin: 0 20px;
+  height: 250px;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: top center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main .work .work__wrapper .cards .card p, main .work .work__wrapper .cards .card h4, main .work .work__wrapper .cards .card .buttons {
+  display: none;
+}
+main .work .work__wrapper .cards .card h4 {
+  margin-bottom: 10px;
+}
+main .work .work__wrapper .cards .card .buttons {
+  margin-top: 15px;
+}
+main .work .work__wrapper .cards .card:first-child {
+  margin-left: 0;
+}
+main .work .work__wrapper .cards .card:last-child {
+  margin-right: 0;
+}
+main .work .work__wrapper .cards .card .card_hover {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgba(51, 51, 51, 0.5);
+  transition: 0.8s;
+}
+main .work .work__wrapper .cards .card:hover .card_hover {
+  height: 100%;
+}
+main .work .work__wrapper .cards .card:hover p, main .work .work__wrapper .cards .card:hover h4, main .work .work__wrapper .cards .card:hover .buttons {
+  display: flex;
+}
+main .work .work__wrapper .cards .card button {
+  width: 120px;
+  margin: 0 6px;
+}
+main .work .work__wrapper .cards .card_1 {
+  position: relative;
+  background-image: url("../images/desktop-design.jpg");
+}
+main .work .work__wrapper .cards .card_2 {
+  position: relative;
+  background-image: url("../images/desktop-design.jpg");
+}
+main .work .work__wrapper .cards .card_3 {
+  position: relative;
+  background-image: url("../images/desktop-design.jpg");
 }
 
 /*# sourceMappingURL=index.css.map */
