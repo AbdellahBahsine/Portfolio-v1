@@ -183,7 +183,7 @@ main{
     .work{
         margin-top: 80px;
         padding-top: 40px;
-        padding-bottom: 80px;
+        padding-bottom: 50px;
         background-color: #f3f3f3;
 
         .work__wrapper{
@@ -193,6 +193,10 @@ main{
             flex-direction: column;
             align-items: center;
 
+            h2{
+                margin-bottom: 4px;
+            }
+
             .cards{
                 display: flex;
                 width: 100%;
@@ -200,84 +204,92 @@ main{
                 margin-bottom: 25px;
 
                 .card{
-                    
-                    z-index: 1;
+                    position: relative;
                     width: 30%;
                     margin: 0 20px;
                     height: 250px;
                     border-radius: 5px;
-                    background-size: cover;
-                    background-position: top center;
                     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                     cursor: pointer;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
+                    overflow: hidden;
 
-                    p, h4, .buttons{
-                        display: none;
-                    }
-
-                    h4{
-                        margin-bottom: 10px;
-                    }
-
-                    .buttons{
-                        margin-top: 15px;
-                    }
-
-                    &:first-child{
-                        margin-left: 0;
-                    }
-
-                    &:last-child{
-                        margin-right: 0;
-                    }
-
-                    .card_hover{
+                    img{
                         position: absolute;
-                        z-index: -2;
-                        top: 0;
+                        background-size: cover;
+                        background-position: top center;
+                        width: 100%;                      
+                    }
+
+                    .info{
+                        position: absolute;
                         left: 0;
+                        top: 0;
+                        z-index: 1;
                         height: 0%;
                         width: 100%;
-                        border-radius: 5px;
-                        background-color:rgba(51, 51, 51, 0.5);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        background:rgba(51, 51, 51, 0.5);
+                        opacity: 0;
                         transition: 0.8s;
 
+                        p{
+                            margin: 10px 0;
+                        }
+
+                        button{
+                                width: 120px;
+                                height: 35px;
+                                margin: 0 6px;
+                        }
                     }
 
-                    &:hover .card_hover{
+                    &:hover .info{
+                        opacity: 1;
                         height: 100%;
                     }
-
-                    &:hover p, &:hover h4, &:hover .buttons{
-                        display: flex;
-                    }
-
-                    button{
-                        width: 120px;
-                        margin: 0 6px;
-                    }
+                    
                 }
+            }
+            button{
+                margin-top: 10px;
+            }
+        }
+    }
 
-                .card_1{
-                    position: relative;
-                    background-image: url("../images/desktop-design.jpg");
-                }
+    .contact{
+       
+        .contact__wrapper{
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-                .card_2{
-                    position: relative;
-                    background-image: url("../images/desktop-design.jpg");
-                }
+            .contact__form{
+                display: flex;
 
-                .card_3{
-                    position: relative;
-                    background-image: url("../images/desktop-design.jpg");
+                .contact__form--left, .contact__form--right{
+                    display: flex;
                 }
             }
         }
+    }
+}
+
+footer{
+    height: 40px;
+    background-color: #333;
+
+    .footer__wrapper{
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }

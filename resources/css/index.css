@@ -157,7 +157,7 @@ main .about .about__wrapper .text__container .percentage-bar::after {
 main .work {
   margin-top: 80px;
   padding-top: 40px;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
   background-color: #f3f3f3;
 }
 main .work .work__wrapper {
@@ -167,6 +167,9 @@ main .work .work__wrapper {
   flex-direction: column;
   align-items: center;
 }
+main .work .work__wrapper h2 {
+  margin-bottom: 4px;
+}
 main .work .work__wrapper .cards {
   display: flex;
   width: 100%;
@@ -174,68 +177,77 @@ main .work .work__wrapper .cards {
   margin-bottom: 25px;
 }
 main .work .work__wrapper .cards .card {
-  z-index: 1;
+  position: relative;
   width: 30%;
   margin: 0 20px;
   height: 250px;
   border-radius: 5px;
-  background-size: cover;
-  background-position: top center;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   cursor: pointer;
+  overflow: hidden;
+}
+main .work .work__wrapper .cards .card img {
+  position: absolute;
+  background-size: cover;
+  background-position: top center;
+  width: 100%;
+}
+main .work .work__wrapper .cards .card .info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  height: 0%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-main .work .work__wrapper .cards .card p, main .work .work__wrapper .cards .card h4, main .work .work__wrapper .cards .card .buttons {
-  display: none;
-}
-main .work .work__wrapper .cards .card h4 {
-  margin-bottom: 10px;
-}
-main .work .work__wrapper .cards .card .buttons {
-  margin-top: 15px;
-}
-main .work .work__wrapper .cards .card:first-child {
-  margin-left: 0;
-}
-main .work .work__wrapper .cards .card:last-child {
-  margin-right: 0;
-}
-main .work .work__wrapper .cards .card .card_hover {
-  position: absolute;
-  z-index: -2;
-  top: 0;
-  left: 0;
-  height: 0%;
-  width: 100%;
-  border-radius: 5px;
-  background-color: rgba(51, 51, 51, 0.5);
+  background: rgba(51, 51, 51, 0.5);
+  opacity: 0;
   transition: 0.8s;
 }
-main .work .work__wrapper .cards .card:hover .card_hover {
-  height: 100%;
+main .work .work__wrapper .cards .card .info p {
+  margin: 10px 0;
 }
-main .work .work__wrapper .cards .card:hover p, main .work .work__wrapper .cards .card:hover h4, main .work .work__wrapper .cards .card:hover .buttons {
-  display: flex;
-}
-main .work .work__wrapper .cards .card button {
+main .work .work__wrapper .cards .card .info button {
   width: 120px;
+  height: 35px;
   margin: 0 6px;
 }
-main .work .work__wrapper .cards .card_1 {
-  position: relative;
-  background-image: url("../images/desktop-design.jpg");
+main .work .work__wrapper .cards .card:hover .info {
+  opacity: 1;
+  height: 100%;
 }
-main .work .work__wrapper .cards .card_2 {
-  position: relative;
-  background-image: url("../images/desktop-design.jpg");
+main .work .work__wrapper button {
+  margin-top: 10px;
 }
-main .work .work__wrapper .cards .card_3 {
-  position: relative;
-  background-image: url("../images/desktop-design.jpg");
+main .contact .contact__wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .contact .contact__wrapper .contact__form {
+  display: flex;
+}
+main .contact .contact__wrapper .contact__form .contact__form--left, main .contact .contact__wrapper .contact__form .contact__form--right {
+  display: flex;
+}
+
+footer {
+  height: 40px;
+  background-color: #333;
+}
+footer .footer__wrapper {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=index.css.map */
