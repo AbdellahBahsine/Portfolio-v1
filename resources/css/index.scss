@@ -58,11 +58,13 @@ button{
 .btn--primary{
     background-color: $primary-color;
     color: #fff;
+    font-family: $sans-serif-font;
 }
 
 .btn--secondary{
     border: 1px solid $primary-color;
     color: $primary-color;
+    font-family: $sans-serif-font;
 }
 
 header{
@@ -261,6 +263,8 @@ main{
     }
 
     .contact{
+        margin-top: 20px;
+        margin-bottom: 40px;
        
         .contact__wrapper{
             width: 80%;
@@ -271,11 +275,66 @@ main{
 
             .contact__form{
                 display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 15px;
+
+                .contact__form__wrapper{
+                    display: flex;
 
                 .contact__form--left, .contact__form--right{
                     display: flex;
+                    flex-direction: column;
+                    margin: 0 20px;
+
+                    input[type="text"], input[type="email"]{
+                        width: 450px;
+                        height: 45px;
+                        border-radius: 25px;
+                        border: 1px solid #333;
+                        margin-bottom: 36px;
+                        padding: 6px 20px;
+                        outline: none;
+
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+
+                        &::placeholder{
+                            font-family: $sans-serif-font;
+                            font-size: 16px;
+                        }
+                    }
+
+                    textarea{
+                        width: 450px;
+                        height: 100%;
+                        border: 1px solid #333;
+                        border-radius: 25px;
+                        padding: 10px 20px;
+                        outline:none;
+                        resize: none;
+
+                        &::placeholder{
+                            font-family: $sans-serif-font;
+                            font-size: 16px;
+                        }
+                    }
+
                 }
+
             }
+
+            .btn{
+                width: 140px;
+                height: 40px;
+                border-radius: 25px;
+                margin-top: 26px;
+                background: none;
+                outline: none;
+                cursor: pointer;
+            }
+        }
         }
     }
 }

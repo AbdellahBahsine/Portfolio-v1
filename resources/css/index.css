@@ -52,11 +52,13 @@ button {
 .btn--primary {
   background-color: #7c17ac;
   color: #fff;
+  font-family: "Lato", sans-serif;
 }
 
 .btn--secondary {
   border: 1px solid #7c17ac;
   color: #7c17ac;
+  font-family: "Lato", sans-serif;
 }
 
 header {
@@ -223,6 +225,10 @@ main .work .work__wrapper .cards .card:hover .info {
 main .work .work__wrapper button {
   margin-top: 10px;
 }
+main .contact {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
 main .contact .contact__wrapper {
   width: 80%;
   margin: 0 auto;
@@ -232,9 +238,55 @@ main .contact .contact__wrapper {
 }
 main .contact .contact__wrapper .contact__form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
 }
-main .contact .contact__wrapper .contact__form .contact__form--left, main .contact .contact__wrapper .contact__form .contact__form--right {
+main .contact .contact__wrapper .contact__form .contact__form__wrapper {
   display: flex;
+}
+main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--left, main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--right {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--left input[type=text], main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--left input[type=email], main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--right input[type=text], main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--right input[type=email] {
+  width: 450px;
+  height: 45px;
+  border-radius: 25px;
+  border: 1px solid #333;
+  margin-bottom: 36px;
+  padding: 6px 20px;
+  outline: none;
+}
+main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--left input[type=text]:last-child, main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--left input[type=email]:last-child, main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--right input[type=text]:last-child, main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--right input[type=email]:last-child {
+  margin-bottom: 0;
+}
+main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--left input[type=text]::placeholder, main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--left input[type=email]::placeholder, main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--right input[type=text]::placeholder, main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--right input[type=email]::placeholder {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--left textarea, main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--right textarea {
+  width: 450px;
+  height: 100%;
+  border: 1px solid #333;
+  border-radius: 25px;
+  padding: 10px 20px;
+  outline: none;
+  resize: none;
+}
+main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--left textarea::placeholder, main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--right textarea::placeholder {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+main .contact .contact__wrapper .contact__form .btn {
+  width: 140px;
+  height: 40px;
+  border-radius: 25px;
+  margin-top: 26px;
+  background: none;
+  outline: none;
+  cursor: pointer;
 }
 
 footer {
