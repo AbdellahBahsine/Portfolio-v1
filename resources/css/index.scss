@@ -1,7 +1,7 @@
 $serif-font: 'Amiri', serif;
 $sans-serif-font: 'Lato', sans-serif;
 $handwriting-font: 'Courgette', cursive;
-$primary-color: rgb(124, 23, 172);
+$primary-color: #3A6073;
 $white-text: #fff;
 
 *{
@@ -35,7 +35,7 @@ a{
 }
 
 .black-text{
-    color: #333;
+    color: #16222A;
 }
 
 .gray-text{
@@ -70,6 +70,10 @@ button{
 header{
     background-color: #333;
     height: 80vh;
+    background-image: url("../images/marina.jpg");
+    background-image: linear-gradient( rgba(22, 34, 42, .5),rgba(58, 96, 115, .5) ), url("../images/marina.jpg");
+    background-size: cover;
+    background-position: center;
 
     .header__wrapper{
         width: 80%;
@@ -134,7 +138,7 @@ main{
                     width: 100%;
                     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
                     background-image: url("../images/IMG-20200911-WA0000.jpg");
-                    background-image: linear-gradient( rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5) ), url("../images/IMG-20200911-WA0000.jpg");
+                    background-image: linear-gradient( rgba(22, 34, 42, .5),rgba(58, 96, 115, .5) ), url("../images/IMG-20200911-WA0000.jpg");
                     background-size: cover;
                     background-position:right;
                 }
@@ -175,7 +179,7 @@ main{
                         position: absolute;
                         width: 350px;
                         height: 3px;
-                        background-color:rgb(124, 23, 172);
+                        background-color:$primary-color;
                     }
                 }
             }
@@ -210,8 +214,8 @@ main{
                     width: 30%;
                     margin: 0 20px;
                     height: 250px;
-                    border-radius: 5px;
-                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    border-radius: 10px;
+                    box-shadow: rgba(188, 188, 190, 0.2) 0px 7px 29px 0px;
                     cursor: pointer;
                     overflow: hidden;
 
@@ -348,7 +352,37 @@ footer{
         height: 100%;
         margin: 0 auto;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+
+        .socials{
+            display: flex;
+            height: 100%;
+            .box{
+                height: 100%;
+                width: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;            
+
+                i{
+                    font-size: 16px;
+                    color: #fff;
+                }
+            }
+
+            .youtube--box{
+                background-color: #FF0000;
+            }
+
+            .github--box{
+                background-color: #4078c0;
+            }
+
+            .linkedin--box{
+                background-color: #0e76a8;
+            }
+        }
     }
 }
