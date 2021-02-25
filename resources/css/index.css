@@ -61,11 +61,38 @@ button {
   font-family: "Lato", sans-serif;
 }
 
+.socials {
+  width: 50px;
+  background-color: #333;
+  position: fixed;
+  transform: translateY(50%);
+  left: 0px;
+}
+.socials .box {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socials .box.github--box {
+  background-color: #4078c0;
+}
+.socials .box.youtube--box {
+  background-color: #FF0000;
+}
+.socials .box.linkedin--box {
+  background-color: #0e76a8;
+}
+.socials .box a {
+  color: #fff;
+}
+
 header {
   background-color: #333;
   height: 80vh;
   background-image: url("../images/marina.jpg");
-  background-image: linear-gradient(rgba(22, 34, 42, 0.5), rgba(58, 96, 115, 0.5)), url("../images/marina.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/marina.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -77,8 +104,17 @@ header .header__wrapper {
   align-items: center;
   height: 16%;
 }
+header .header__wrapper .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 header .header__wrapper .nav__item {
   margin-left: 25px;
+  transition: 0.9s;
+}
+header .header__wrapper .nav__item:hover {
+  color: #3A6073;
 }
 header .hero {
   height: 80%;
@@ -203,7 +239,7 @@ main .work .work__wrapper .cards .card .info {
   left: 0;
   top: 0;
   z-index: 1;
-  height: 0%;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -212,7 +248,7 @@ main .work .work__wrapper .cards .card .info {
   text-align: center;
   background: rgba(51, 51, 51, 0.5);
   opacity: 0;
-  transition: 0.8s;
+  transition: 0.9s;
 }
 main .work .work__wrapper .cards .card .info p {
   margin: 10px 0;
@@ -224,7 +260,6 @@ main .work .work__wrapper .cards .card .info button {
 }
 main .work .work__wrapper .cards .card:hover .info {
   opacity: 1;
-  height: 100%;
 }
 main .work .work__wrapper button {
   margin-top: 10px;
@@ -295,7 +330,7 @@ main .contact .contact__wrapper .contact__form .btn {
 
 footer {
   height: 40px;
-  background-color: #333;
+  background-color: #16222a;
 }
 footer .footer__wrapper {
   width: 80%;
@@ -303,32 +338,10 @@ footer .footer__wrapper {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-footer .footer__wrapper .socials {
-  display: flex;
-  height: 100%;
-}
-footer .footer__wrapper .socials .box {
-  height: 100%;
-  width: 40px;
-  display: flex;
   justify-content: center;
-  align-items: center;
-  cursor: pointer;
 }
-footer .footer__wrapper .socials .box i {
-  font-size: 16px;
-  color: #fff;
-}
-footer .footer__wrapper .socials .youtube--box {
-  background-color: #FF0000;
-}
-footer .footer__wrapper .socials .github--box {
-  background-color: #4078c0;
-}
-footer .footer__wrapper .socials .linkedin--box {
-  background-color: #0e76a8;
+footer .footer__wrapper p {
+  color: #3a6073;
 }
 
 /*# sourceMappingURL=index.css.map */

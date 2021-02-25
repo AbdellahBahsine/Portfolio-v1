@@ -9,10 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Courgette&display=swap&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d5a84b61e8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
+    <div class="socials">
+        <div class="box github--box"><a href="#"><i class="fab fa-github"></i></a></div>
+        <div class="box youtube--box"><a href="#"><i class="fab fa-youtube"></i></a></div>
+        <div class="box linkedin--box"><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+        <div class="box email--box"><a href="#"><i class="fas fa-envelope"></i></a></div>
+    </div>
+ 
     <header>
-        <div class="header__wrapper">
+        <div id="header" class="header__wrapper">
             <h2 class="logo logo-font white-text">Abdellah</h2>
             <nav>
                 <a href="#" class="nav__item white-text sans-serif">Home</a>
@@ -24,11 +32,11 @@
 
         <div class="hero">
             <div class="hero__wrapper">
-                <h1 class="hero__title serif white-text">My name is Abdellah, I'm a <span>front-end developer</span></h1>
-                <p class="hero__subtitle sans-serif gray-text">I create websites from scratch using html, css and javascript</p>
+                <h1 class="hero__title serif white-text" data-aos="fade-left">My name is Abdellah, I'm a <span>front-end developer</span></h1>
+                <p class="hero__subtitle sans-serif gray-text" data-aos="fade-right">I create websites from scratch using html, css and javascript</p>
                 <div class="buttons">
-                    <button class="btn btn--primary"><a href="#" class="white-text sans-serif">My Work</a></button>
-                    <button class="btn btn--secondary"><a href="#" class="primary-color sans-serif">Get In Touch</a></button>
+                    <button class="btn btn--primary"><a href="#" class="white-text sans-serif" data-aos="fade-left">My Work</a></button>
+                    <button class="btn btn--secondary"><a href="#" class="primary-color sans-serif" data-aos="fade-right">Get In Touch</a></button>
                 </div>
             </div>
         </div>
@@ -36,7 +44,7 @@
 
     <main>
         <section class="about">
-            <div class="about__wrapper">
+            <div class="about__wrapper" data-aos="fade-left">
                 <div class="img__container">
                     <div class="img"></div>
                 </div>
@@ -59,7 +67,7 @@
         </section>
 
         <section class="work">
-            <div class="work__wrapper">
+            <div class="work__wrapper" data-aos="fade-right">
                 <h2 class="serif title black-text">My Work</h2>
                 <div class="cards">
                     <div class="card">
@@ -103,7 +111,7 @@
         </section>
 
         <section class="contact">
-            <div class="contact__wrapper">
+            <div class="contact__wrapper" data-aos="fade-left">
                 <h2 class="black-text title serif">Get In Touch</h2>
                 <form class="contact__form">
                     <div class="contact__form__wrapper">
@@ -125,12 +133,15 @@
     <footer>
         <div class="footer__wrapper">
             <p class="white-text sans-serif">Copyright © 2021 Abdellah </p>
-            <div class="socials">
-                <div class="box github--box"><a href="#"><i class="fab fa-github"></i></a></div>
-                <div class="box youtube--box"><a href="#"><i class="fab fa-youtube"></i></a></div>
-                <div class="box linkedin--box"><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
-            </div>
         </div>
     </footer>
+
+    <script src="resources/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        duration: 1000
+    });
+  </script>
 </body>
 </html>

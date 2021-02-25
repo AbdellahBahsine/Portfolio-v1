@@ -67,11 +67,43 @@ button{
     font-family: $sans-serif-font;
 }
 
+.socials{
+    width: 50px;
+    background-color: #333;
+    position: fixed;
+    transform: translateY(50%);
+    left:0px;
+
+    .box{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.github--box{
+            background-color: #4078c0;
+        }
+
+        &.youtube--box{
+            background-color: #FF0000;
+        }
+        
+        &.linkedin--box{
+            background-color: #0e76a8;
+        }
+
+        a{
+            color: #fff;
+        }
+    }
+}
+
 header{
     background-color: #333;
     height: 80vh;
     background-image: url("../images/marina.jpg");
-    background-image: linear-gradient( rgba(22, 34, 42, .5),rgba(58, 96, 115, .5) ), url("../images/marina.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5), (rgba(0,0,0,0.5))), url("../images/marina.jpg");
     background-size: cover;
     background-position: center;
 
@@ -83,8 +115,19 @@ header{
         align-items: center;
         height: 16%;
 
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+          }
+
         .nav__item{
             margin-left: 25px;
+            transition: 0.9s;
+
+            &:hover{
+                color: $primary-color;
+            }
         }
     }
 
@@ -231,7 +274,7 @@ main{
                         left: 0;
                         top: 0;
                         z-index: 1;
-                        height: 0%;
+                        height: 100%;
                         width: 100%;
                         display: flex;
                         flex-direction: column;
@@ -240,7 +283,7 @@ main{
                         text-align: center;
                         background:rgba(51, 51, 51, 0.5);
                         opacity: 0;
-                        transition: 0.8s;
+                        transition: 0.9s;
 
                         p{
                             margin: 10px 0;
@@ -255,7 +298,6 @@ main{
 
                     &:hover .info{
                         opacity: 1;
-                        height: 100%;
                     }
                     
                 }
@@ -345,7 +387,8 @@ main{
 
 footer{
     height: 40px;
-    background-color: #333;
+    background-color: rgba(22, 34, 42);
+
 
     .footer__wrapper{
         width: 80%;
@@ -353,36 +396,10 @@ footer{
         margin: 0 auto;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
 
-        .socials{
-            display: flex;
-            height: 100%;
-            .box{
-                height: 100%;
-                width: 40px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;            
-
-                i{
-                    font-size: 16px;
-                    color: #fff;
-                }
-            }
-
-            .youtube--box{
-                background-color: #FF0000;
-            }
-
-            .github--box{
-                background-color: #4078c0;
-            }
-
-            .linkedin--box{
-                background-color: #0e76a8;
-            }
-        }
+         p{
+             color: rgba(58, 96, 115)
+         }
     }
 }
