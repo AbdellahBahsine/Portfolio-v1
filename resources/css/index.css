@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  letter-spacing: 1px;
 }
 
 a {
@@ -25,11 +26,11 @@ a {
 }
 
 .white-text {
-  color: #fff;
+  color: #ebebeb;
 }
 
 .black-text {
-  color: #16222A;
+  color: #0D1F22;
 }
 
 .gray-text {
@@ -37,64 +38,49 @@ a {
 }
 
 .primary-color {
-  color: #3A6073;
+  color: #3C5233;
 }
 
 button {
-  width: 140px;
+  width: 180px;
   height: 40px;
-  border-radius: 25px;
   background: none;
   outline: none;
   border: none;
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+.black-bg {
+  background-color: #0D1F22;
 }
 
 .btn--primary {
-  background-color: #3A6073;
+  background-color: #3C5233;
   color: #fff;
   font-family: "Lato", sans-serif;
 }
+.btn--primary:hover {
+  background-color: #264027;
+}
 
 .btn--secondary {
-  border: 1px solid #3A6073;
-  color: #3A6073;
+  border: 1px solid #3C5233;
+  color: #3C5233;
   font-family: "Lato", sans-serif;
 }
-
-.socials {
-  width: 50px;
-  background-color: #333;
-  position: fixed;
-  transform: translateY(50%);
-  left: 0px;
-}
-.socials .box {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.socials .box.github--box {
-  background-color: #4078c0;
-}
-.socials .box.youtube--box {
-  background-color: #FF0000;
-}
-.socials .box.linkedin--box {
-  background-color: #0e76a8;
-}
-.socials .box a {
+.btn--secondary:hover {
+  background-color: #3C5233;
   color: #fff;
 }
 
 header {
   background-color: #333;
   height: 80vh;
-  background-image: url("../images/marina.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/marina.jpg");
+  background-image: url("../images/hero_img.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero_img.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
 }
 header .header__wrapper {
   width: 80%;
@@ -103,6 +89,31 @@ header .header__wrapper {
   justify-content: space-between;
   align-items: center;
   height: 16%;
+}
+header .header__wrapper .mobile-menu {
+  position: relative;
+  width: 35px;
+  height: 3px;
+  background-color: #fff;
+  cursor: pointer;
+}
+header .header__wrapper .mobile-menu::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+header .header__wrapper .mobile-menu::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -8px;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
 }
 header .header__wrapper .sticky {
   position: fixed;
@@ -114,7 +125,7 @@ header .header__wrapper .nav__item {
   transition: 0.9s;
 }
 header .header__wrapper .nav__item:hover {
-  color: #3A6073;
+  color: #3C5233;
 }
 header .hero {
   height: 80%;
@@ -127,13 +138,14 @@ header .hero .hero__wrapper {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding-bottom: 35px;
 }
 header .hero .hero__wrapper .hero__title {
   font-size: 38px;
 }
 header .hero .hero__wrapper .hero__title span {
-  color: #3A6073;
+  color: #3C5233;
 }
 header .hero .hero__wrapper .buttons {
   margin-top: 30px;
@@ -153,24 +165,23 @@ main .about .about__wrapper {
 main .about .about__wrapper .img__container {
   display: flex;
   justify-content: center;
-  width: 45%;
-  margin-left: 5%;
+  flex: 1;
+  padding: 0 40px;
 }
 main .about .about__wrapper .img__container .img {
   width: 100%;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-image: url("../images/IMG-20200911-WA0000.jpg");
   background-image: linear-gradient(rgba(22, 34, 42, 0.5), rgba(58, 96, 115, 0.5)), url("../images/IMG-20200911-WA0000.jpg");
   background-size: cover;
   background-position: right;
 }
 main .about .about__wrapper .text__container {
-  padding: 30px;
-  width: 45%;
+  padding: 20px 100px 20px 0px;
+  flex: 1;
 }
 main .about .about__wrapper .text__container p {
   line-height: 1.5;
-  width: 440px;
 }
 main .about .about__wrapper .text__container .percentage-text {
   margin-top: 25px;
@@ -183,24 +194,64 @@ main .about .about__wrapper .text__container .percentage-text {
 main .about .about__wrapper .text__container .percentage-text h4 {
   line-height: 1.5;
 }
-main .about .about__wrapper .text__container .percentage-bar {
+main .about .about__wrapper .text__container .percentage-bar__html {
   width: 100%;
   height: 3px;
   background-color: #c2c2c2;
   position: relative;
 }
-main .about .about__wrapper .text__container .percentage-bar::after {
+main .about .about__wrapper .text__container .percentage-bar__html::after {
   content: "";
   position: absolute;
-  width: 350px;
+  left: 0;
+  width: 70%;
   height: 3px;
-  background-color: #3A6073;
+  background-color: #0D1F22;
+}
+main .about .about__wrapper .text__container .percentage-bar__css {
+  width: 100%;
+  height: 3px;
+  background-color: #c2c2c2;
+  position: relative;
+}
+main .about .about__wrapper .text__container .percentage-bar__css::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 65%;
+  height: 3px;
+  background-color: #0D1F22;
+}
+main .about .about__wrapper .text__container .percentage-bar__javascript {
+  width: 100%;
+  height: 3px;
+  background-color: #c2c2c2;
+  position: relative;
+}
+main .about .about__wrapper .text__container .percentage-bar__javascript::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 3px;
+  background-color: #0D1F22;
+}
+main .about .about__wrapper .text__container .percentage-bar__reactjs {
+  width: 100%;
+  height: 3px;
+  background-color: #c2c2c2;
+  position: relative;
+}
+main .about .about__wrapper .text__container .percentage-bar__reactjs::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 60%;
+  height: 3px;
+  background-color: #0D1F22;
 }
 main .work {
   margin-top: 80px;
-  padding-top: 40px;
-  padding-bottom: 50px;
-  background-color: #f3f3f3;
 }
 main .work .work__wrapper {
   width: 80%;
@@ -210,63 +261,79 @@ main .work .work__wrapper {
   align-items: center;
 }
 main .work .work__wrapper h2 {
-  margin-bottom: 4px;
+  line-height: 1;
+}
+main .work .work__wrapper .subtitle {
+  font-size: 18px;
+  text-align: center;
 }
 main .work .work__wrapper .cards {
   display: flex;
+  flex-direction: column;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 50px;
   margin-bottom: 25px;
 }
 main .work .work__wrapper .cards .card {
+  display: flex;
+  margin-bottom: 50px;
+}
+main .work .work__wrapper .cards .card .card__image {
   position: relative;
-  width: 30%;
-  margin: 0 20px;
-  height: 250px;
-  border-radius: 10px;
-  box-shadow: rgba(188, 188, 190, 0.2) 0px 7px 29px 0px;
-  cursor: pointer;
+  flex: 1;
+  height: 300px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   overflow: hidden;
 }
-main .work .work__wrapper .cards .card img {
+main .work .work__wrapper .cards .card .card__image img {
   position: absolute;
   background-size: cover;
   background-position: top center;
+  background-repeat: no-repeat;
   width: 100%;
 }
 main .work .work__wrapper .cards .card .info {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: rgba(51, 51, 51, 0.5);
-  opacity: 0;
-  transition: 0.9s;
+  padding: 50px 20px 40px 70px;
+  flex: 1;
+}
+main .work .work__wrapper .cards .card .info h4 {
+  font-size: 20px;
 }
 main .work .work__wrapper .cards .card .info p {
-  margin: 10px 0;
+  margin: 20px 0;
+  font-size: 18px;
 }
-main .work .work__wrapper .cards .card .info button {
-  width: 120px;
-  height: 35px;
-  margin: 0 6px;
+main .work .work__wrapper .cards .card .info .buttons {
+  margin-top: 30px;
 }
-main .work .work__wrapper .cards .card:hover .info {
-  opacity: 1;
+main .work .work__wrapper .cards .card .info .buttons a .btn_1 {
+  background-color: #3C5233;
+  color: #fff;
+  width: 140px;
 }
-main .work .work__wrapper button {
-  margin-top: 10px;
+main .work .work__wrapper .cards .card .info .buttons a .btn_2 {
+  border: 2px solid #3C5233;
+  color: #3C5233;
+  width: 140px;
+}
+main .work .work__wrapper .more-btn {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  border-bottom: 1px solid #0D1F22;
+  padding-bottom: 2px;
+  letter-spacing: 1px;
+}
+main .work .work__wrapper .more-btn i {
+  font-size: 16px;
 }
 main .contact {
-  margin-top: 20px;
-  margin-bottom: 40px;
+  padding-bottom: 50px;
+  margin-top: 70px;
+  padding-top: 60px;
+  background-color: #ebebeb;
 }
 main .contact .contact__wrapper {
   width: 80%;
@@ -274,63 +341,28 @@ main .contact .contact__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
-main .contact .contact__wrapper .contact__form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 15px;
+main .contact .contact__wrapper h2 {
+  line-height: 1;
 }
-main .contact .contact__wrapper .contact__form .contact__form__wrapper {
-  display: flex;
+main .contact .contact__wrapper p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1.5;
 }
-main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--left, main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--right {
-  display: flex;
-  flex-direction: column;
-  margin: 0 20px;
+main .contact .contact__wrapper p i {
+  margin-right: 10px;
 }
-main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--left input[type=text], main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--left input[type=email], main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--right input[type=text], main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--right input[type=email] {
-  width: 450px;
-  height: 45px;
-  border-radius: 25px;
-  border: 1px solid #333;
-  margin-bottom: 36px;
-  padding: 6px 20px;
-  outline: none;
-}
-main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--left input[type=text]:last-child, main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--left input[type=email]:last-child, main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--right input[type=text]:last-child, main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--right input[type=email]:last-child {
-  margin-bottom: 0;
-}
-main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--left input[type=text]::placeholder, main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--left input[type=email]::placeholder, main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--right input[type=text]::placeholder, main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--right input[type=email]::placeholder {
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
-}
-main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--left textarea, main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--right textarea {
-  width: 450px;
-  height: 100%;
-  border: 1px solid #333;
-  border-radius: 25px;
-  padding: 10px 20px;
-  outline: none;
-  resize: none;
-}
-main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--left textarea::placeholder, main .contact .contact__wrapper .contact__form .contact__form__wrapper .contact__form--right textarea::placeholder {
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
-}
-main .contact .contact__wrapper .contact__form .btn {
-  width: 140px;
-  height: 40px;
-  border-radius: 25px;
-  margin-top: 26px;
-  background: none;
-  outline: none;
-  cursor: pointer;
+main .contact .contact__wrapper p.subtitle {
+  margin-bottom: 25px;
+  text-align: center;
+  max-width: 600px;
 }
 
 footer {
   height: 40px;
-  background-color: #16222a;
+  background-color: #0D1F22;
 }
 footer .footer__wrapper {
   width: 80%;
@@ -338,10 +370,90 @@ footer .footer__wrapper {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
-footer .footer__wrapper p {
-  color: #3a6073;
+footer .footer__wrapper .socials {
+  display: flex;
+}
+footer .footer__wrapper .socials a {
+  margin-right: 20px;
+}
+footer .footer__wrapper .socials a i {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  header .hero .hero__wrapper .hero__title {
+    font-size: 24px;
+  }
+  header .hero .hero__wrapper .hero__subtitle {
+    font-size: 14px;
+  }
+
+  main .about .about__wrapper .img__container {
+    display: none;
+  }
+  main .about .about__wrapper .text__container {
+    text-align: center;
+    padding: 0;
+  }
+  main .work .work__wrapper .cards .card {
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  main .work .work__wrapper .cards .card .card__image {
+    width: 100%;
+    flex: initial;
+    box-shadow: none;
+  }
+  main .work .work__wrapper .cards .card .info {
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px 40px 20px;
+  }
+  main .work .work__wrapper .cards .card .info .buttons .btn_1, main .work .work__wrapper .cards .card .info .buttons .btn_2 {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 576px) {
+  header .header__wrapper .logo {
+    z-index: 2;
+  }
+  header .header__wrapper nav {
+    display: none;
+  }
+  header .header__wrapper .mobile {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0D1F22;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header .header__wrapper .mobile.active {
+    display: flex;
+  }
+  header .header__wrapper .mobile .nav__item {
+    margin: 20px 0;
+    font-size: 24px;
+  }
+  header .header__wrapper .mobile .exit {
+    position: absolute;
+    top: 35px;
+    right: 60px;
+  }
+
+  footer {
+    padding: 20px;
+  }
+  footer .footer__wrapper {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

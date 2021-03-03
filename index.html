@@ -12,21 +12,24 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <div class="socials">
-        <div class="box github--box"><a href="#"><i class="fab fa-github"></i></a></div>
-        <div class="box youtube--box"><a href="#"><i class="fab fa-youtube"></i></a></div>
-        <div class="box linkedin--box"><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
-        <div class="box email--box"><a href="#"><i class="fas fa-envelope"></i></a></div>
-    </div>
+    
  
     <header>
-        <div id="header" class="header__wrapper">
+        <div class="header__wrapper">
             <h2 class="logo logo-font white-text">Abdellah</h2>
             <nav>
-                <a href="#" class="nav__item white-text sans-serif">Home</a>
-                <a href="#" class="nav__item white-text sans-serif">About</a>
-                <a href="#" class="nav__item white-text sans-serif">My Work</a>
-                <a href="#" class="nav__item white-text sans-serif">Contact</a>
+                <a href="#home" class="nav__item white-text sans-serif">Home</a>
+                <a href="#about" class="nav__item white-text sans-serif">About</a>
+                <a href="#work" class="nav__item white-text sans-serif">My Work</a>
+                <a href="#contact" class="nav__item white-text sans-serif">Contact</a>
+            </nav>
+            <div class="mobile-menu" onclick={toggler()}></div>
+            <nav id="mobile" class="mobile">
+                <div id="exit" class="exit">X</div>
+                <a href="#home" class="nav__item white-text sans-serif">Home</a>
+                <a href="#about" class="nav__item white-text sans-serif">About</a>
+                <a href="#work" class="nav__item white-text sans-serif">My Work</a>
+                <a href="#contact" class="nav__item white-text sans-serif">Contact</a>
             </nav>
         </div>
 
@@ -35,106 +38,94 @@
                 <h1 class="hero__title serif white-text" data-aos="fade-left">My name is Abdellah, I'm a <span>front-end developer</span></h1>
                 <p class="hero__subtitle sans-serif gray-text" data-aos="fade-right">I create websites from scratch using html, css and javascript</p>
                 <div class="buttons">
-                    <button class="btn btn--primary"><a href="#" class="white-text sans-serif" data-aos="fade-left">My Work</a></button>
-                    <button class="btn btn--secondary"><a href="#" class="primary-color sans-serif" data-aos="fade-right">Get In Touch</a></button>
+                    <a href="#work"><button class="btn btn--primary sans-serif">My Work</button></a>
+                    <a href="#contact"><button class="btn btn--secondary sans-serif">Get In Touch</button></a>
                 </div>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="about">
+        <section id="about" class="about">
             <div class="about__wrapper" data-aos="fade-left">
                 <div class="img__container">
                     <div class="img"></div>
                 </div>
                 <div class="text__container">
-                    <h2 class="serif title black-text">About</h2>
+                    <h2 class="serif title black-text">About Me</h2>
                     <p class="sans-serif gray-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id turpis eu ipsum sagittis pellentesque id ac tortor. Nam blandit nulla at ante posuere, et mollis lorem ultrices. Morbi posuere tellus at dolor semper. <br> <br>
-                        Sed in tempor nisl, a condimentum mi. Nam ullamcorper neque at sapien tincidunt sodales. Mauris ultricies tincidunt ex, eu cursus quam placerat id. Mauris efficitur tristique eros a imperdiet. 
+                        My name is Abdellah and I'm a self-taught front-end developer. I love creating websites using my favorite javascript framework which is React JS. I'm keen to learn about new stuff related to web development and solve problems. <br> <br>
+                        My skill set include HTML5/CSS3 and JavaScript. I have knowledge using the Bootstrap 4 framework which is mobile responsive and Sass, I also use React JS.  
                     </p>
-                    <div class="percentage-text sans-serif black-text"><h4>HTML 5</h4><span>75%</span></div>
-                    <div class="percentage-bar"></div>
-                    <div class="percentage-text sans-serif black-text"><h4>CSS 3</h4><span>75%</span></div>
-                    <div class="percentage-bar"></div>
-                    <div class="percentage-text sans-serif black-text"><h4>JavaScript</h4><span>75%</span></div>
-                    <div class="percentage-bar"></div>
-                    <div class="percentage-text sans-serif black-text"><h4>ReactJS</h4><span>75%</span></div>
-                    <div class="percentage-bar"></div>
+                    <div class="percentage-text sans-serif black-text"><h4>HTML 5</h4><span>70%</span></div>
+                    <div class="percentage-bar__html"></div>
+                    <div class="percentage-text sans-serif black-text"><h4>CSS 3</h4><span>65%</span></div>
+                    <div class="percentage-bar__css"></div>
+                    <div class="percentage-text sans-serif black-text"><h4>JavaScript</h4><span>50%</span></div>
+                    <div class="percentage-bar__javascript"></div>
+                    <div class="percentage-text sans-serif black-text"><h4>ReactJS</h4><span>60%</span></div>
+                    <div class="percentage-bar__reactjs"></div>
                 </div>
             </div>
         </section>
 
-        <section class="work">
+        <section id="work" class="work">
             <div class="work__wrapper" data-aos="fade-right">
                 <h2 class="serif title black-text">My Work</h2>
+                <p class="sans-serif gray-text subtitle">These are some of my previous projects that I created</p>
                 <div class="cards">
                     <div class="card">
-                        <img src="resources/images/desktop-design.jpg" />
-                        <div class="info">
-                            <h4 class="white-text">Loopstudios landing page</h4>
-                            <p class="gray-text">I created this website to practice my html/css skills. It's responsive and user-friendly.</p>
-                            <div class="buttons">
-                                <button class="btn btn--primary"><a href="#" class="white-text sans-serif">Preview Site</a></button>
-                                <button class="btn btn--secondary"><a href="#" class="primary-color sans-serif">View Code</a></button>
-                            </div>
-                        </div>                        
-                    </div>
+                        <div class="card__image"><img src="resources/images/desktop-design.jpg" /></div>
+                    <div class="info">
+                        <h4 class="primary-color">Loopstudios landing page</h4>
+                        <p class="gray-text">I created this website to practice my html/css skills. It's responsive and user-friendly.</p>
+                        <div class="buttons">
+                            <a href="#"><button class="btn_1 sans-serif">Preview Site</button></a>
+                        <a href="#"><button class="btn_2 sans-serif">View Code</button></a>
+                        </div>
+                    </div>  
+                </div>   
 
-                    <div class="card">
-                        <img src="resources/images/desktop-design.jpg" />
-                        <div class="info">
-                            <h4 class="white-text">Loopstudios landing page</h4>
-                            <p class="gray-text">I created this website to practice my html/css skills. It's responsive and user-friendly.</p>
-                            <div class="buttons">
-                                <button class="btn btn--primary"><a href="#" class="white-text sans-serif">Preview Site</a></button>
-                                <button class="btn btn--secondary"><a href="#" class="primary-color sans-serif">View Code</a></button>
-                            </div>
-                        </div>                        
+                <div class="card">
+                    <div class="card__image"><img src="resources/images/desktop-design.jpg" /></div>
+                <div class="info">
+                    <h4 class="primary-color">Loopstudios landing page</h4>
+                    <p class="gray-text">I created this website to practice my html/css skills. It's responsive and user-friendly.</p>
+                    <div class="buttons">
+                        <a href="#"><button class="btn_1 sans-serif">Preview Site</button></a>
+                        <a href="#"><button class="btn_2 sans-serif">View Code</button></a>
                     </div>
+                </div>  
+            </div>   
 
-                    <div class="card">
-                        <img src="resources/images/desktop-design.jpg" />
-                        <div class="info">
-                            <h4 class="white-text">Loopstudios landing page</h4>
-                            <p class="gray-text">I created this website to practice my html/css skills. It's responsive and user-friendly.</p>
-                            <div class="buttons">
-                                <button class="btn btn--primary"><a href="#" class="white-text sans-serif">Preview Site</a></button>
-                                <button class="btn btn--secondary"><a href="#" class="primary-color sans-serif">View Code</a></button>
-                            </div>
-                        </div>                        
-                    </div>
+                    
+
             </div>
-            <button class="btn btn--primary"><a class="white-text sans-serif" href="#">See More</a></button>
+            <a class="white-text sans-serif" href="#"><button class="more-btn">See More <i class="fas fa-arrow-right"></i></button></a>
             </div>
         </section>
 
-        <section class="contact">
+        <section id="contact" class="contact">
             <div class="contact__wrapper" data-aos="fade-left">
                 <h2 class="black-text title serif">Get In Touch</h2>
-                <form class="contact__form">
-                    <div class="contact__form__wrapper">
-                    <div class="contact__form--left">
-                      <input type="text" placeholder="Name">
-                      <input type="email" placeholder="Email address">
-                      <input type="text" placeholder="Subject">
-                    </div>
-                    <div class="contact__form--right">
-                      <textarea name="message" type="text" placeholder="Type your message here..."></textarea>
-                    </div>
-                    </div>
-                    <div><input type="submit" value="Submit" class="btn btn--secondary">  </div>
-                  </form>
+                <p class="sans-serif gray-text subtitle">I'm available for any kind of work, you can send me a message in my email or call me by phone.</p>
+                <p class="sans-serif black-text"><i class="fas fa-envelope"></i> Paylo_@outlook.com</p>
+                <p class="sans-serif black-text"><i class="fas fa-phone-alt"></i> +212689182363</p>
             </div>
         </section>
+
+        <footer>
+            <div class="footer__wrapper">
+                <p class="white-text sans-serif">Copyright 2021 © By Abdellah All Rights Reserved</p>
+                <div class="socials">
+                    <a href="#"><div class="white-text linkedin--box"><i class="fab fa-linkedin-in"></i></div></a> 
+                    <a href="#"><div class="white-text github--box"><i class="fab fa-github"></i></div></a>
+                </div>
+            </div>
+        </footer>
     </main>
 
-    <footer>
-        <div class="footer__wrapper">
-            <p class="white-text sans-serif">Copyright © 2021 Abdellah </p>
-        </div>
-    </footer>
+    
 
     <script src="resources/main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
