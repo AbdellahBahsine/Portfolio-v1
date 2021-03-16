@@ -4,135 +4,130 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdellah Front End Developer</title>
-    <link rel="stylesheet" href="./resources/css/index.css">
+    <title>Abdellah Bahsine | Front-End Developer</title>
+
+    <link rel="stylesheet" href="./Css/styles.css">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Courgette&display=swap&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d5a84b61e8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Space+Mono&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    
- 
-    <header>
-        <div class="header__wrapper">
-            <h2 class="logo logo-font white-text">Abdellah</h2>
-            <nav>
-                <a href="#home" class="nav__item white-text sans-serif">Home</a>
-                <a href="#about" class="nav__item white-text sans-serif">About</a>
-                <a href="#work" class="nav__item white-text sans-serif">My Work</a>
-                <a href="#contact" class="nav__item white-text sans-serif">Contact</a>
-            </nav>
-            <div class="mobile-menu" onclick={toggler()}></div>
-            <nav id="mobile" class="mobile">
-                <div id="exit" class="exit">X</div>
-                <a href="#home" class="nav__item white-text sans-serif">Home</a>
-                <a href="#about" class="nav__item white-text sans-serif">About</a>
-                <a href="#work" class="nav__item white-text sans-serif">My Work</a>
-                <a href="#contact" class="nav__item white-text sans-serif">Contact</a>
-            </nav>
-        </div>
 
-        <div class="hero">
-            <div class="hero__wrapper">
-                <h1 class="hero__title serif white-text" data-aos="fade-left">My name is Abdellah, I'm a <span>front-end developer</span></h1>
-                <p class="hero__subtitle sans-serif gray-text" data-aos="fade-right">I create websites from scratch using html, css and javascript</p>
-                <div class="buttons">
-                    <a href="#work"><button class="btn btn--primary sans-serif">My Work</button></a>
-                    <a href="#contact"><button class="btn btn--secondary sans-serif">Get In Touch</button></a>
-                </div>
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">LOGO</a>
+            <div id="bars" class="bars">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
+            <nav>
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#work" class="nav-link">My Work</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#resume" class="nav-link">resumé</a>
+                <a href="#contact" class="nav-link">contact</a>
+            </nav>
         </div>
     </header>
 
     <main>
+
         <section id="about" class="about">
-            <div class="about__wrapper" data-aos="fade-left">
-                <div class="img__container">
-                    <div class="img"></div>
+            <div class="about-inner">
+                <h1 class="about-title">My name is <span class="typing" id="typeText"></span></h1>
+                <figure>
+                    <img src="./images/about.jpg" alt="about-image">
+                </figure>
+                <div class="socials">
+                    <a class="social" href="#"><i class="fab fa-linkedin-in"></i></a> |
+                    <a class="social" href="#"><i class="fab fa-github"></i></a> |
+                    <a class="social" href="#"><i class="fab fa-twitter"></i></a> |
+                    <a class="social" href="#"><i class="fab fa-medium-m"></i></a> |
+                    <a class="social" href="#"><i class="fas fa-envelope"></i></a> 
                 </div>
-                <div class="text__container">
-                    <h2 class="serif title black-text">About Me</h2>
-                    <p class="sans-serif gray-text">
-                        My name is Abdellah and I'm a self-taught front-end developer. I love creating websites using my favorite javascript framework which is React JS. I'm keen to learn about new stuff related to web development and solve problems. <br> <br>
-                        My skill set include HTML5/CSS3 and JavaScript. I have knowledge using the Bootstrap 4 framework which is mobile responsive and Sass, I also use React JS.  
-                    </p>
-                    <div class="percentage-text sans-serif black-text"><h4>HTML 5</h4><span>70%</span></div>
-                    <div class="percentage-bar__html"></div>
-                    <div class="percentage-text sans-serif black-text"><h4>CSS 3</h4><span>65%</span></div>
-                    <div class="percentage-bar__css"></div>
-                    <div class="percentage-text sans-serif black-text"><h4>JavaScript</h4><span>50%</span></div>
-                    <div class="percentage-bar__javascript"></div>
-                    <div class="percentage-text sans-serif black-text"><h4>ReactJS</h4><span>60%</span></div>
-                    <div class="percentage-bar__reactjs"></div>
-                </div>
+                <div class="line"></div>
+                <p class="about-description">I'm a self-taught front-end developer. I love creating websites using my favorite javascript framework React JS. I'm keen to learn about new stuff related to web development and solve problems.
+                <br> <br>
+                <strong>My skill set include:</strong> 
+                <br>
+                HTML5 - CSS3 - Bootstrap - Sass - JavaScript - React Js - Git - Github</p>
             </div>
         </section>
 
         <section id="work" class="work">
-            <div class="work__wrapper" data-aos="fade-right">
-                <h2 class="serif title black-text">My Work</h2>
-                <p class="sans-serif gray-text subtitle">These are some of my previous projects that I created</p>
+            <div class="work-inner">
+                <h2 class="work-title">My <span>Work</span></h1>
+                <p class="work-subtitle">These are some of my previous porjects</p>
                 <div class="cards">
+
                     <div class="card">
-                        <div class="card__image"><img src="resources/images/desktop-design.jpg" /></div>
-                    <div class="info">
-                        <h4 class="primary-color">Loopstudios landing page</h4>
-                        <p class="gray-text">I created this website to practice my html/css skills. It's responsive and user-friendly.</p>
-                        <div class="buttons">
-                            <a href="#"><button class="btn_1 sans-serif">Preview Site</button></a>
-                        <a href="#"><button class="btn_2 sans-serif">View Code</button></a>
+                        <div class="card-img">
+                            <img src="./images/loopstudios.jpg" alt="">
                         </div>
-                    </div>  
-                </div>   
-
-                <div class="card">
-                    <div class="card__image"><img src="resources/images/desktop-design.jpg" /></div>
-                <div class="info">
-                    <h4 class="primary-color">Loopstudios landing page</h4>
-                    <p class="gray-text">I created this website to practice my html/css skills. It's responsive and user-friendly.</p>
-                    <div class="buttons">
-                        <a href="#"><button class="btn_1 sans-serif">Preview Site</button></a>
-                        <a href="#"><button class="btn_2 sans-serif">View Code</button></a>
+                        <div class="card-body">
+                            <h3 class="card-title">Loopstudios landing page</h3>
+                            <p class="card-text">I created this website to practice my html/css skills. It's responsive and user-friendly.</p>
+                            <div class="line"></div>
+                            <div class="buttons">
+                                <a href="#" class="preview"><i class="fas fa-desktop"></i> Preview</a>
+                                <a href="#" class="code"><i class="fas fa-file-code"></i> Code</a>
+                            </div>
+                        </div>
                     </div>
-                </div>  
-            </div>   
 
-                    
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="./images/loopstudios.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Loopstudios landing page</h3>
+                            <p class="card-text">I created this website to practice my html/css skills. It's responsive and user-friendly.</p>
+                            <div class="line"></div>
+                            <div class="buttons">
+                                <a href="#" class="preview"><i class="fas fa-desktop"></i> Preview</a>
+                                <a href="#" class="code"><i class="fas fa-file-code"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
 
-            </div>
-            <a class="white-text sans-serif" href="#"><button class="more-btn">See More <i class="fas fa-arrow-right"></i></button></a>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="./images/loopstudios.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Loopstudios landing page</h3>
+                            <p class="card-text">I created this website to practice my html/css skills. It's responsive and user-friendly.</p>
+                            <div class="line"></div>
+                            <div class="buttons">
+                                <a href="#" class="preview"><i class="fas fa-desktop"></i> Preview</a>
+                                <a href="#" class="code"><i class="fas fa-file-code"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
 
         <section id="contact" class="contact">
-            <div class="contact__wrapper" data-aos="fade-left">
-                <h2 class="black-text title serif">Get In Touch</h2>
-                <p class="sans-serif gray-text subtitle">I'm available for any kind of work, you can send me a message in my email or call me by phone.</p>
-                <p class="sans-serif black-text"><i class="fas fa-envelope"></i> Paylo_@outlook.com</p>
-                <p class="sans-serif black-text"><i class="fas fa-phone-alt"></i> +212689182363</p>
+            <div class="contact-inner">
+                <h2 class="contact-title">Get In <span>Touch</span></h2>
+                <p class="contact-description">Do you want to work with me or you just want to talk? You can reach me through Linkedin or here is my g-mail and phone number.</p>
+                <a class="contact-mail" href="#"><i class="fas fa-envelope"></i> Abdellah.Bahsine01@gmail.com</a>
+                <p class="contact-phone" ><i class="fas fa-phone-alt"></i> +212689182363</p>
             </div>
         </section>
-
-        <footer>
-            <div class="footer__wrapper">
-                <p class="white-text sans-serif">Copyright 2021 © By Abdellah All Rights Reserved</p>
-                <div class="socials">
-                    <a href="#"><div class="white-text linkedin--box"><i class="fab fa-linkedin-in"></i></div></a> 
-                    <a href="#"><div class="white-text github--box"><i class="fab fa-github"></i></div></a>
-                </div>
-            </div>
-        </footer>
     </main>
 
+    <footer>
+        <div class="footer-inner">
+            <p class="copyright">© Developed by Abdellah Bahsine 2021</p>
+        </div>
+    </footer>
     
-
-    <script src="resources/main.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({
-        duration: 1000
-    });
-  </script>
+    <script src="https://kit.fontawesome.com/d5a84b61e8.js" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
