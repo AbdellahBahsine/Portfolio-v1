@@ -1,12 +1,14 @@
-var bars = document.getElementById("bars");
+let hamburgerMenu = document.getElementById("bars");
+let mobileMenu = document.getElementById("mobile-menu");
 
-bars.addEventListener("click", function() {
-  bars.classList.toggle("open")
+hamburgerMenu.addEventListener("click", function() {
+  hamburgerMenu.classList.toggle("open");
+  mobileMenu.classList.toggle("visible");
 })
 
-var typeText = document.querySelector("#typeText")
-var textToBeTyped = "Abdellah"
-var index = 0, isAdding = true
+let typeText = document.querySelector("#typeText")
+let textToBeTyped = "Abdellah"
+let index = 0, isAdding = true 
 
 function playAnim() {
   setTimeout(function () {
