@@ -36,6 +36,17 @@ header{
     align-items: center;
 }
 
+.logo{
+    font-family: 'Fira Code', monospace;
+}
+
+.logo span{
+    background-color: #ADC6F0;
+    padding: 5px;
+    color: #fff;
+    border-radius: 3px;
+}
+
 .nav-link, .logo{
     color: #3E4756;
 }
@@ -345,6 +356,24 @@ img{
 .contact-mail i, .contact-phone i{
     margin-right: 10px;
     color: #ADC6F0;
+}
+
+.contact-form{
+    display: flex;
+}
+
+.contact-left .name{
+    grid-area: name;
+    height: 40px;
+}
+
+.contact-left .email{
+    grid-area: email;
+}
+
+.contact-right .message{
+    grid-area: message;
+    height: 100%;
 }
 
 /* Footer Section */
